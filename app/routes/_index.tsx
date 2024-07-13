@@ -26,7 +26,7 @@ export default function Index() {
         </LabelLink>.
       </p>
       <p>
-        If you want to get in touch you can <a href="mailto:skye@blueskye.co.uk">email me</a>
+        If you want to get in touch you can <LabelLink href="mailto:skye@blueskye.co.uk" title="email address">email me</LabelLink>
       </p>
     </main>
   );
