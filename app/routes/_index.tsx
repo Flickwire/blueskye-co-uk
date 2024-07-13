@@ -1,48 +1,33 @@
 import type { MetaFunction } from "@remix-run/node";
+import LabelLink from "../components/LabelLink";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Skye Brady" },
+    { name: "description", content: "Skye Brady's Portfolio" },
   ];
 };
 
 export default function Index() {
   return (
-    <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix</h1>
-      <ul className="list-disc mt-4 pl-6 space-y-2">
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/quickstart"
-            rel="noreferrer"
-          >
-            5m Quick Start
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/start/tutorial"
-            rel="noreferrer"
-          >
-            30m Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-blue-700 underline visited:text-purple-900"
-            target="_blank"
-            href="https://remix.run/docs"
-            rel="noreferrer"
-          >
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <main className="text-lg bg-white h-full text-brand-5 max-w-4xl mx-auto px-8 py-12">
+      <h1 className="text-6xl text-brand-6">Hi, I&rsquo;m Skye!</h1>
+      <p>
+        Welcome to my site. I build things for the web.
+      </p>
+      <p>
+        You can find me on{' '}
+        <LabelLink href="https://github.com/flickwire" title="My Github Account">
+          Github
+        </LabelLink>
+        {' '}and{' '}
+        <LabelLink href="https://linkedin.com/in/skyebrady" title="My LinkedIn Profile">
+          LinkedIn
+        </LabelLink>.
+      </p>
+      <p>
+        If you want to get in touch you can <a href="mailto:skye@blueskye.co.uk">email me</a>
+      </p>
+    </main>
   );
 }
